@@ -1,0 +1,122 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'MainWindow.ui'
+#
+# Created by: PyQt5 UI code generator 5.12.1
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(479, 330)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.tabWidget = QtWidgets.QTabWidget(self.centralwidget)
+        self.tabWidget.setGeometry(QtCore.QRect(0, 0, 471, 301))
+        self.tabWidget.setObjectName("tabWidget")
+        self.tab = QtWidgets.QWidget()
+        self.tab.setObjectName("tab")
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.tab)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.dateEdit = QtWidgets.QDateEdit(self.tab)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.dateEdit.setFont(font)
+        self.dateEdit.setObjectName("dateEdit")
+        self.verticalLayout.addWidget(self.dateEdit)
+        self.calendarWidget = QtWidgets.QCalendarWidget(self.tab)
+        self.calendarWidget.setObjectName("calendarWidget")
+        self.verticalLayout.addWidget(self.calendarWidget)
+        self.tabWidget.addTab(self.tab, "")
+        self.tab_2 = QtWidgets.QWidget()
+        self.tab_2.setObjectName("tab_2")
+        self.groupBox = QtWidgets.QGroupBox(self.tab_2)
+        self.groupBox.setGeometry(QtCore.QRect(0, 10, 151, 96))
+        self.groupBox.setObjectName("groupBox")
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.groupBox)
+        self.verticalLayout_2.setObjectName("verticalLayout_2")
+        self.radioButton = QtWidgets.QRadioButton(self.groupBox)
+        self.radioButton.setObjectName("radioButton")
+        self.verticalLayout_2.addWidget(self.radioButton)
+        self.radioButton_2 = QtWidgets.QRadioButton(self.groupBox)
+        self.radioButton_2.setObjectName("radioButton_2")
+        self.verticalLayout_2.addWidget(self.radioButton_2)
+        self.radioButton_3 = QtWidgets.QRadioButton(self.groupBox)
+        self.radioButton_3.setObjectName("radioButton_3")
+        self.verticalLayout_2.addWidget(self.radioButton_3)
+        self.groupBox_2 = QtWidgets.QGroupBox(self.tab_2)
+        self.groupBox_2.setGeometry(QtCore.QRect(250, 10, 201, 111))
+        self.groupBox_2.setObjectName("groupBox_2")
+        self.horizontalLayout = QtWidgets.QHBoxLayout(self.groupBox_2)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.dial = QtWidgets.QDial(self.groupBox_2)
+        self.dial.setObjectName("dial")
+        self.horizontalLayout.addWidget(self.dial)
+        self.lcdNumber = QtWidgets.QLCDNumber(self.groupBox_2)
+        self.lcdNumber.setObjectName("lcdNumber")
+        self.horizontalLayout.addWidget(self.lcdNumber)
+        self.progressBar = QtWidgets.QProgressBar(self.tab_2)
+        self.progressBar.setGeometry(QtCore.QRect(10, 220, 451, 23))
+        self.progressBar.setProperty("value", 24)
+        self.progressBar.setObjectName("progressBar")
+        self.widget = QtWidgets.QWidget(self.tab_2)
+        self.widget.setGeometry(QtCore.QRect(10, 120, 231, 91))
+        self.widget.setObjectName("widget")
+        self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.widget)
+        self.verticalLayout_4.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_4.setObjectName("verticalLayout_4")
+        self.fontComboBox = QtWidgets.QFontComboBox(self.widget)
+        self.fontComboBox.setObjectName("fontComboBox")
+        self.verticalLayout_4.addWidget(self.fontComboBox)
+        self.label_2 = QtWidgets.QLabel(self.widget)
+        font = QtGui.QFont()
+        font.setPointSize(15)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_2.setFont(font)
+        self.label_2.setText("")
+        self.label_2.setObjectName("label_2")
+        self.verticalLayout_4.addWidget(self.label_2)
+        self.tabWidget.addTab(self.tab_2, "")
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 479, 21))
+        self.menubar.setObjectName("menubar")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.retranslateUi(MainWindow)
+        self.tabWidget.setCurrentIndex(1)
+        self.radioButton_2.clicked.connect(self.progressBar.reset)
+        self.dial.valueChanged['int'].connect(self.lcdNumber.display)
+        self.fontComboBox.activated['QString'].connect(self.label_2.setText)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainWindow", "Widget1"))
+        self.groupBox.setTitle(_translate("MainWindow", "Choose Option"))
+        self.radioButton.setText(_translate("MainWindow", "Default"))
+        self.radioButton_2.setText(_translate("MainWindow", "Reset ProgressBar"))
+        self.radioButton_3.setText(_translate("MainWindow", "Select ProgressBar"))
+        self.groupBox_2.setTitle(_translate("MainWindow", "GroupBox"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "Widget2"))
+
+
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())

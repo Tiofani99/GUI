@@ -1,0 +1,130 @@
+============================= Dictionary =============================
+pins = {"TioFani":1234, "Amin":1111,"Fahri":2222}
+pins["TioFani"] // Menampilkan value
+1234
+
+pins.keys()
+dict_keys(['TioFani', 'Amin', 'Fahri'])
+
+pins.values()
+dict_values([1234, 1111, 2222])
+
+pins["Baru"]=4444 // menambahkan
+pins
+{'TioFani': 1234, 'Amin': 1111, 'Fahri': 2222, 'Baru': 4444}
+
+pins.pop("Baru") // menghapus baru
+4444
+pins
+{'TioFani': 1234, 'Amin': 1111, 'Fahri': 2222}
+pins["Elok"]="AB12"
+pins
+{'TioFani': 1234, 'Amin': 1111, 'Fahri': 2222, 'Elok': 'AB12'}
+
+
+
+
+============================= User Input =============================
+
+
+
+>>> masukan = input("Masukan nama anda : ")
+Masukan nama anda : Tio
+>>> print(masukan)
+Tio
+
+
+>>> bilangan = int(input("Masukan Bilangan : "))
+Masukan Bilangan : 5
+>>> print(bilangan**2)
+25
+
+>>> bil = float(input("Masukan bilangan pecahan : "))
+Masukan bilangan pecahan : 5
+>>> print(bil/2)
+2.5
+>>> bil = float(input("Masukan bilangan pecahan : "))
+Masukan bilangan pecahan : 78.7
+>>> print(bil/2)
+39.35
+
+
+============================= Condition =============================
+
+>>> kode = 1234
+>>> kode in pins.values()
+True
+
+kondisi
+>>> if(1<5):
+...     print("yessss")//spasi 4x bisa juga tab
+... else:
+...     print("tidak")// spasi 4x
+...
+yessss
+
+//Masih kondisi
+>>> user_input = float(input("Masukan angka : "))
+Masukan angka : 99
+>>> if(user_input > 100):
+...     print("Lebih besar")
+... else:
+...     print("Lebih kecil")
+...
+Lebih kecil
+
+============================= Multi Condition =============================
+
+>>> if(user_input >100):
+...     print("Lebih besar")
+... elif(user_input == 99):
+...     print("Nilainya sama yaitu 99")
+... else:
+...     print("Lebih kecil")
+...
+Nilainya sama yaitu 99
+>>>
+>>>
+
+
+
+============================= Function =============================
+
+prosedur
+>>> def printing():
+...     print("Halo")
+...     print("Dunia")
+...
+>>> printing()
+Halo
+Dunia
+>>>
+
+fungsi
+>>> def luas_persegi(sisi):
+...     luas=sisi*sisi
+...     return luas
+...
+>>> luas_persegi(9)
+81
+>>>
+
+>>> def luas_segitiga(alas,tinggi):
+...     luas=(alas*tinggi)/2
+...     print("Luas Segitiga : %d"%luas)
+...
+>>> luas_segitiga(100,50)
+Luas Segitiga : 2500
+>>>
+
+
+>>> def hitung_umur(tahun):
+...     umur = 2019-tahun
+...     print(umur)
+...
+>>> hitung_umur(1999)
+20
+>>>
+
+
+

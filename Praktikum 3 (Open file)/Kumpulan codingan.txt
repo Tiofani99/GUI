@@ -1,0 +1,105 @@
+Buat file perangkat.txt, isikan dengan :
+Ram
+SSD
+HardDisk
+CPU
+//Untuk membuka file 
+
+cd Lokasi
+Python
+
+myfile = open("perangkat.txt")
+konten =myfile.read()
+myfile.close()
+print(konten)
+
+Ram
+SSD
+HardDisk
+CPU
+
+>>> type(myfile)
+<class '_io.TextIOWrapper
+>>> myfile.read()
+'Ram\nSSD\nHardDisk\nCPU'
+>>> myfile.read()
+''//Kenapa null , karena cursor sudah berada di bawah
+
+>>> myfile.seek(0) // untuk mengembalikan cursor ke atas
+0
+>>> myfile.read()
+'Ram\nSSD\nHardDisk\nCPU'
+>>> myfile.read()
+''
+
+==================================================================== LOOP
+
+>>> a=[1,2,3]
+>>> print(a[2])
+3
+>>> for item in a:
+...     print(item)
+...
+1
+2
+3
+>>> b="helloo"
+>>> for haha in b:
+...     print(haha)
+...
+h
+e
+l
+l
+o
+o
+>>>
+
+>>> blackpink=["Lisa","Jennie","Rose","Ji-Soo"]
+>>> for b in blackpink:
+...     print(b)
+...
+Lisa
+Jennie
+Rose
+Ji-Soo
+>>>
+
+11
+13
+15
+17
+6
+11
+12
+17
+90
+50.0  Fahrenhait
+-4.0  Fahrenhait
+212.0  Fahrenhait
+
+
+=================================================================================================== Menulis File
+>>> myfile=open("Pegawai.txt","w")
+>>> myfile.write("wkwkwkwk")
+8
+>>> myfile.write("wkwkwkwk")
+8
+>>> myfile.write("wkwkwkwk")
+8
+>>> myfile.close()
+>>> myfile=open("Pegawai.txt","w")
+>>> myfile.write("wkwkwkwk\n")
+9
+>>> myfile.write("wkwkwkwk\n")
+9
+>>> myfile.write("wkwkwkwk\n")
+9
+>>> myfile.write("wkwkwkwk\n")
+9
+>>> myfile.close()
+>>> myfile=open("Pegawai.txt","a")
+>>> myfile.write("wkwkwkwg\n")
+9
+>>> myfile.close()
+

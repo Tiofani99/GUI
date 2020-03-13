@@ -1,0 +1,4 @@
+Ram
+SSD
+HardDisk
+CPU
